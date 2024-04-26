@@ -237,7 +237,7 @@ let
       runScript = makeRunScript {};
     };
     buildInputs = [ qemu_kvm xorriso ];
-    __impure = true; # set __impure = true; if debugging and want to connect via VNC during the build
+    # __impure = true; # set __impure = true; if debugging and want to connect via VNC during the build
   } ''
     set -x
     cp -r --no-preserve=mode ${osx-kvm} ./osx-kvm
