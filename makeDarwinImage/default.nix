@@ -127,6 +127,10 @@ let
     expect "Continue"
     exec ${qemuSendMouse} 1000 710
 
+    ${sendUser "An Error occured preparing the software update."}
+    expect "OK"
+    exec ${qemuSendMouse} 963 384
+
     ${sendUser "Select Your Country or Region"}
     expect "Select Your Country or Region"
     exec ${qemuSendKeys} "united states<delay><shift-tab><delay><spc>"
